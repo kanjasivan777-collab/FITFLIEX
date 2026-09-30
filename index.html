@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FITFLIX - Fitness Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">
+      FIT<span>FLIX</span>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search calculator...">
+    </div>
+  </header>
+
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <p class="small-title">WELCOME TO</p>
+
+      <h1>Your Fitness.<br>
+        <span>Your Rules.</span>
+      </h1>
+
+      <p class="hero-text">
+        Calculate BMI, calories, water intake, running,
+        jogging and food calories in seconds.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Categories -->
+  <nav class="categories">
+    <button class="active" data-category="all">All</button>
+    <button data-category="body">Body</button>
+    <button data-category="food">Food</button>
+    <button data-category="fitness">Fitness</button>
+  </nav>
+
+
+  <!-- Calculator Cards -->
+  <main class="container">
+
+    <h2>Explore Calculators</h2>
+
+    <div class="calculator-grid" id="calculatorGrid">
+
+
+      <!-- BMI -->
+      <article class="calculator-card"
+               data-category="body"
+               data-name="BMI Calculator">
+
+        <div class="card-icon">⚖️</div>
+
+        <span class="tag">BODY</span>
+
+        <h3>BMI Calculator</h3>
+
+        <p>
+          Calculate your Body Mass Index
+          using your height and weight.
+        </p>
+
+        <button class="open-btn"
+                onclick="openCalculator('bmi')">
+          Calculate →
+        </button>
+
+      </article>
+
+
+      <!-- Calories -->
+      <article class="calculator-card"
+               data-category="body"
+               data-name="Daily Calories">
+
+        <div class="card-icon">🔥</div>
+
+        <span class="tag">BODY</span>
+
+        <h3>Daily Calories</h3>
+
+        <p>
+          Estimate your daily calorie
+          requirement.
+        </p>
+
+        <button class="open-btn"
+                onclick="openCalculator('calories')">
+          Calculate →
+        </button>
+
+      </article>
+
+
+      <!-- Water -->
+      <article class="calculator-card"
+               data-category="body"
+               data-name="Water Intake">
+
+        <div class="card-icon">💧</div>
+
+        <span class="tag">BODY</span>
+
+        <h3>Water Intake</h3>
+
+        <p>
+          Find an approximate daily
+          water requirement.
+        </p>
+
+        <button class="open-btn"
+                onclick="openCalculator('water')">
+          Calculate →
+        </button>
+
+      </article>
+
+
+      <!-- Running -->
+      <article class="calculator-card"
+               data-category="fitness"
+               data-name="Running Calculator">
+
+        <div class="card-icon">🏃</div>
+
+        <span class="tag">FITNESS</span>
+
+        <h3>Running</h3>
+
+        <p>
+          Estimate calories burned
+          while running.
+        </p>
+
+        <button class="open-btn"
+                onclick="openCalculator('running')">
+          Calculate →
+        </button>
+
+      </article>
+
+
+      <!-- Jogging -->
+      <article class="calculator-card"
+               data-category="fitness"
+               data-name="Jogging Calculator">
+
+        <div class="card-icon">🚶</div>
+
+        <span class="tag">FITNESS</span>
+
+        <h3>Jogging</h3>
+
+        <p>
+          Estimate calories burned
+          during jogging.
+        </p>
+
+        <button class="open-btn"
+                onclick="openCalculator('jogging')">
+          Calculate →
+        </button>
+
+      </article>
+
+
+      <!-- Food -->
+      <article class="calculator-card"
+               data-category="food"
+               data-name="Food Calories">
+
+        <div class="card-icon">🍽️</div>
+
+        <span class="tag">FOOD</span>
+
+        <h3>Food Calories</h3>
+
+        <p>
+          Check calories in common
+          foods.
+        </p>
+
+        <button class="open-btn"
+                onclick="openCalculator('food')">
+          Explore →
+        </button>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!-- Calculator Popup -->
+  <div class="modal" id="calculatorModal">
+
+    <div class="modal-content">
+
+      <button class="close-btn"
+              onclick="closeCalculator()">
+        ×
+      </button>
+
+      <h2 id="modalTitle">
+        Calculator
+      </h2>
+
+      <div id="calculatorForm"></div>
+
+      <div id="result"></div>
+
+    </div>
+
+  </div>
+
+
+  <!-- Bottom Navigation -->
+  <nav class="bottom-nav">
+
+    <button onclick="scrollToTop()">
+      🏠
+      <span>Home</span>
+    </button>
+
+    <button onclick="focusSearch()">
+      🔍
+      <span>Search</span>
+    </button>
+
+    <button onclick="showAll()">
+      🧮
+      <span>Calculators</span>
+    </button>
+
+  </nav>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
