@@ -525,3 +525,19 @@ body {
   }
 
 }
+
+/* Privacy Policy Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px 100px;
+}
+
+.footer a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color: #e50914;
+}
